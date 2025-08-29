@@ -1,0 +1,192 @@
+:root {
+    --mainTextColor: #8bacdaff;
+    --mainHoverColor: #00fff7;
+    --mainBackgroundColor: #0d192bff;
+    --cardColor:#14253dff;
+    --noHoverColor: #ffffff;
+    --mainBorderRadius: 7px;
+    --mainFontSize: 18px;
+    --mainFontFamily: "Outfit";
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+*::selection {
+    color:var(--mainBackgroundColor);
+    background-color: var(--noHoverColor);
+}
+body {
+    font-family: var(--mainFontFamily);
+    color: var(--mainTextColor);
+    height: 100vh;
+}
+main {
+    width: 100%;
+    height: 100%;
+    background-color: var(--mainBackgroundColor);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 320px;
+    height: 90%;
+    background-color: var(--cardColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 20px;
+    border-radius: var(--mainBorderRadius);
+    -webkit-border-radius: var(--mainBorderRadius);
+    -moz-border-radius: var(--mainBorderRadius);
+    -ms-border-radius: var(--mainBorderRadius);
+    -o-border-radius: var(--mainBorderRadius);
+}
+.card > div {
+    position: relative;
+    width: 100%;
+}
+.product::before {
+    content: url(../images/icon-view.svg);
+    position: absolute;
+    top: calc(50% - 48px / 2);
+    left: calc(50% - 48px / 2);
+    visibility: hidden;
+}
+.product:hover::before {
+    z-index: 1;
+    visibility: visible;
+}
+.product {
+    height: 280px;
+    cursor: pointer;
+}
+.product img {
+    width: 100%;
+    position: absolute;
+    border-radius: var(--mainBorderRadius);
+    -webkit-border-radius: var(--mainBorderRadius);
+    -moz-border-radius: var(--mainBorderRadius);
+    -ms-border-radius: var(--mainBorderRadius);
+    -o-border-radius: var(--mainBorderRadius);
+}
+.product::after{
+    content: "";
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    visibility: hidden;
+    background-color: #00fff785;
+    border-radius: var(--mainBorderRadius);
+    -webkit-border-radius: var(--mainBorderRadius);
+    -moz-border-radius: var(--mainBorderRadius);
+    -ms-border-radius: var(--mainBorderRadius);
+    -o-border-radius: var(--mainBorderRadius);
+}
+.product:hover::after {
+    visibility: visible;
+    transition: 0.2s linear;
+}
+h2 {
+    text-transform: capitalize;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: calc(var(--mainFontSize) + 4px);
+}
+h2 span:hover {
+    color: var(--mainHoverColor);
+    cursor: pointer;
+}
+.info p {
+    font-size: calc(var(--mainFontSize) - 2px);
+    line-height: 1.6;
+    margin: 5px 0px 0px;
+}
+.info p span {
+    text-transform: capitalize;
+}
+.price {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.price p {
+    position: relative;
+}
+.sell::before {
+    content: url(../images/icon-ethereum.svg);
+    position: absolute;
+    left: 0px;
+}
+p.sell {
+    padding-left: 15px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--mainHoverColor);
+}
+.time::before {
+    content: url(../images/icon-clock.svg);
+    position: absolute;
+    left: -18px;
+    top: 2px;
+}
+p.time {
+    text-align: right;
+    text-transform: capitalize;
+}
+.owner::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -10px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/image-avatar.png);
+    background-size: cover;
+    border: var(--noHoverColor) solid 1px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.owner p {
+    text-align: center;
+    text-transform: capitalize;
+    word-spacing: 1px;
+}
+.owner span {
+    color: var(--noHoverColor);
+}
+.owner span:hover {
+    color: var(--mainHoverColor);
+    cursor: pointer;
+}
+.owner::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    border: #2f415bff solid 1px;
+    top: -20px;
+}
+footer {
+    position: absolute;
+    width: 350px;
+    bottom: 1%;
+    margin: 0px auto;
+}
+footer p {
+    text-align: center;
+    font-size: calc(var(--mainFontSize) - 6px);
+}
+.attribution a {
+    text-decoration: none;
+    color: var(--noHoverColor);
+}
+.attribution a:hover {
+    color: var(--mainHoverColor);
+}
