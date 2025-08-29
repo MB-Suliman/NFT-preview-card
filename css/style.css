@@ -4,7 +4,7 @@
     --mainBackgroundColor: #0d192bff;
     --cardColor:#14253dff;
     --noHoverColor: #ffffff;
-    --mainBorderRadius: 7px;
+    --mainBorderRadius: 10px;
     --mainFontSize: 18px;
     --mainFontFamily: "Outfit";
 }
@@ -32,11 +32,12 @@ main {
 }
 .card {
     width: 320px;
-    height: 90%;
+    height: 86%;
     background-color: var(--cardColor);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    gap: 0px;
     align-items: center;
     padding: 0px 20px;
     border-radius: var(--mainBorderRadius);
@@ -79,7 +80,7 @@ main {
     height: 280px;
     position: absolute;
     visibility: hidden;
-    background-color: #00fff785;
+    background-color: #00fff76e;
     border-radius: var(--mainBorderRadius);
     -webkit-border-radius: var(--mainBorderRadius);
     -moz-border-radius: var(--mainBorderRadius);
@@ -102,14 +103,12 @@ h2 span:hover {
 }
 .info p {
     font-size: calc(var(--mainFontSize) - 2px);
-    line-height: 1.6;
-    margin: 5px 0px 0px;
 }
 .info p span {
     text-transform: capitalize;
 }
 .price {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -124,7 +123,7 @@ h2 span:hover {
 p.sell {
     padding-left: 15px;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--mainHoverColor);
 }
 .time::before {
