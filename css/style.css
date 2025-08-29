@@ -96,6 +96,7 @@ h2 {
     color: #ffffff;
     font-weight: 600;
     font-size: calc(var(--mainFontSize) + 4px);
+    margin-bottom: 10px;
 }
 h2 span:hover {
     color: var(--mainHoverColor);
